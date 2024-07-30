@@ -1,4 +1,4 @@
-## Closures with Image (Markdown)
+## Closures
 
 **Closures**
 
