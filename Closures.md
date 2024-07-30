@@ -42,10 +42,6 @@ myClosure(); // Output: "I'm from outer function"
 5. `myClosure` stores the returned function.
 6. Calling `myClosure()` executes `innerFunction`, which can still access `outerVariable` due to the closure.
 
-**Image:**
-
-[Image of Closure](https://ibb.co/G2YfrXH)
-
 **In summary:**
 
 Closures are powerful tools for creating private variables and functions within functions. They are used extensively in JavaScript for various functionalities.
