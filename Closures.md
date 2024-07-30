@@ -16,14 +16,14 @@ function outerFunction() {
   let outerVariable = "I'm from outer function";
 
   function innerFunction() {
-    console.log(outerVariable); // Accessing outerVariable
+    console.log(outerVariable);
   }
 
   return innerFunction;
 }
 
 let myClosure = outerFunction();
-myClosure(); // Output: "I'm from outer function"
+myClosure();
 ```
 
 ### Breakdown
