@@ -1,21 +1,21 @@
+Here's the markdown text file with the changes and image added:
+
+````markdown
 ## Closures
 
-Let me tell the thing about Closure, basically there a two main types of scopes in Javascript.
+Let me tell you about closures! In JavaScript, there are two main types of scopes:
 
-Now a scope is the thing that write within the curly braces i.e {}.
+**Scope** refers to the accessibility of variables within your code. It's defined by curly braces (`{}`).
 
-Global Scope: Variables are defined outside the functions.
-Global scope is a scope which contains variables that can be accessed by any function inside the scope.
+* **Global Scope:** Variables defined outside of functions are accessible by any function within the same script.
+* **Local Scope:** Variables defined inside of functions are only accessible by that specific function.
 
-Local Scope: Variables are defined inside the functions.
-Local scope is a scope which contains variables that can only be accessed by the function itself.
-
-Here's a code-implemention of Closure:
+Here's a code example demonstrating closures:
 
 ```javascript
 function outerFunction() {
   let outerVariable = "I'm from outer function";
-  console.log(typeof.outerVariable)
+  console.log(typeof outerVariable);
 
   function innerFunction() {
     console.log(outerVariable); // Accessing outerVariable
@@ -26,18 +26,17 @@ function outerFunction() {
 
 let myClosure = outerFunction();
 myClosure(); // Output: "I'm from outer function"
-```
+````
 
-Firstly there's a function named "outerFunction", then there's an initialization of a string variable named "outerVariable" it also contains a function inside itself named "innerFunction"
+**Explanation:**
 
-Inside function innerFunction there's a console.log method that logs a message to the console, in this case it is the outerVariable
+1.  We define a function named `outerFunction`.
+2.  Inside `outerFunction`, we create a variable named `outerVariable` and another function named `innerFunction`.
+3.  `innerFunction` logs the value of `outerVariable`.
+4.  The `outerFunction` returns `innerFunction`.
+5.  We call `outerFunction` and store the returned function (the closure) in `myClosure`.
+6.  Finally, calling `myClosure()` executes the inner function, which can still access the `outerVariable` even though `outerFunction` has already finished running.
 
-Nextly, it contains a return statement, here it is innerFunction, i.e the return argument of outerFunction is the function innerFunction which logs out the variable outerVariable.
+**In essence, a closure is a function that remembers variables from its outer function's scope, even after the outer function has returned.**
 
-Now a variable named "myClosure" is declared and it contains the return value of outerFunction which has an another nested function innerfunction.
-
-And lastly, myClosure() is the act of calling or executing that inner function.
-
-and thats all.
-
-![Alt text](https://ibb.co/G2YfrXH)
+![Closure](https://ibb.co/G2YfrXH)
